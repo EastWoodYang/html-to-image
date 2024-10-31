@@ -45,7 +45,9 @@ jobs:
         run: pnpm install --no-frozen-lockfile --ignore-scripts
 
       - name: 📦　Build
-        run: pnpm run build
+        run: |
+          pnpm run build
+          cat /home/runner/work/html-to-image/html-to-image/dist/html-to-image.js
 
       - name: ✅　Test
         run: pnpm run test
